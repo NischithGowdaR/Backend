@@ -1,4 +1,4 @@
-import { User } from '../models/user.model.js';
+import { User } from '../models/user.models.js';
 
 const registerUser = async (req, res) => {
     try {
@@ -34,7 +34,7 @@ const registerUser = async (req, res) => {
 
 
     } catch (error) {
-        res.stauts(500).json({ message: "Internal server Error", error: error.message });
+        res.status(500).json({ message: "Internal server Error", error: error.message });
         
     }
 };
